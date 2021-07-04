@@ -1,0 +1,46 @@
+[
+  {
+    "uid" : "2cbfccba-c7a9-4296-9f23-b792d047c196",
+    "name" : "Schneider Aventinus",
+    "style" : "Light Lager",
+    "hop" : "Mt. Rainier",
+    "yeast" : "1275 - Thames Valley Ale",
+    "ibu" : "72 IBU",
+    "alcohol" : "6.7%",
+    "blg" : "7.2°Blg",
+    "randomCount" : 2
+  },
+  {   
+    "uid" : "ab887e8f-b059-4692-a789-a1ed2c633855",
+    "name" : "HopSlam Ale",
+    "style" : "Scottish And Irish Ale",
+    "hop" : "Bitter Gold",
+    "yeast" : "3944 - Belgian Witbier",
+    "ibu" : "15 IBU",
+    "alcohol" : "9.4%",
+    "blg" : "12.3°Blg",
+    "randomCount" : 3
+  },
+  {
+    "uid" : "32310f05-7f6c-4a51-8f79-9169a2f3cea2",
+    "name" : "Pliny The Elder",
+    "style" : "Light Lager",
+    "hop" : "Columbia",
+    "yeast" : "3522 - Belgian Ardennes",
+    "ibu" : "70 IBU",
+    "alcohol" : "6.0%",
+    "blg" : "9.8°Blg",
+    "randomCount" : 2
+  },
+  {
+    "uid" : "ff7bf4c4-38e8-4a1a-b600-716d6c0f3324",
+    "name" : "Pliny The Elder",
+    "style" : "Porter",
+    "hop" : "Cascade",
+    "yeast" : "1098 - British Ale",
+    "ibu" : "99 IBU",
+    "alcohol" : "7.1%",
+    "blg" : "8.6°Blg",
+    "randomCount" : 0
+  }
+]
