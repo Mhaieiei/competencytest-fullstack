@@ -14,43 +14,46 @@ alcohol: "9.5%",
 blg: “8.2°Blg”, randomCount: 0
 }
  */
-const beerSchema = new Schema({
-  uid: {
-    type: String,
-    required: true,
-    unique: true,
+const beerSchema = new Schema(
+  {
+    uid: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    style: {
+      type: String,
+      required: true,
+    },
+    hop: {
+      type: String,
+      required: true,
+    },
+    yeast: {
+      type: String,
+      required: true,
+    },
+    ibu: {
+      type: String,
+      required: true,
+    },
+    alcohol: {
+      type: String,
+      required: true,
+    },
+    blg: {
+      type: String,
+      required: true,
+    },
+    randomCount: {
+      type: Number,
+      required: true,
+    },
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  style: {
-    type: String,
-    required: true,
-  },
-  hop: {
-    type: String,
-    required: true,
-  },
-  yeast: {
-    type: String,
-    required: true,
-  },
-  ibu: {
-    type: String,
-    required: true,
-  },
-  alcohol: {
-    type: String,
-    required: true,
-  },
-  blg: {
-    type: String,
-    required: true,
-  },
-  randomCount: {
-    type: Number,
-    required: true,
-  },
-});
+  { versionKey: false }
+);
 module.exports = beer = mongoose.model("beer", beerSchema);
