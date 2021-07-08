@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Alert from "./Alert";
 import Spinner from "./Spinner";
+import BeerDetail from "./BeerDetail";
+import Button from "./Button";
 
 const BeerInfo = () => {
   const [isLoading, setLoading] = useState(true);
@@ -30,32 +33,14 @@ const BeerInfo = () => {
           <Spinner />
         ) : (
           <div className="beerInfo">
-            {isErrorMsg && (
-              <div className={"alert alert-danger"}>{isErrorMsg}</div>
-            )}
+            {isErrorMsg && <Alert message={isErrorMsg} type="danger" />}
             <header>
               <h1>Beer</h1>
             </header>
-            <div className="table">
-              <table className="table-info">
-                {beerInfo &&
-                  Object.keys(beerInfo).map((key) => (
-                    <tr key={key}>
-                      <td>{key}:</td>
-                      <td>{beerInfo[key]}</td>
-                    </tr>
-                  ))}
-              </table>
-            </div>
+            <BeerDetail beerInfo={beerInfo} />
           </div>
         )}
-        <button
-          className="btn btn-primary my-1"
-          name="action"
-          onClick={fetchNextRandomBeer}
-        >
-          Next
-        </button>
+        <Button text="Next" onChange={fetchNextRandomBeer} />
       </div>
     </div>
   );
