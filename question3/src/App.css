@@ -62,6 +62,19 @@ body {
   border-color: #ddd;
 }
 
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background:  #f4f4f4;
+  color: #333;
+}
+
+.alert-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
 .card-header {
   background-color: #f3f6f7;
   display:flex;
