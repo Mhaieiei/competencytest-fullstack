@@ -34,8 +34,8 @@ const validationTestCases = [
   [[], 0, "Cannot parse argument as number"],
   [0, {}, "Cannot parse argument as number"],
   [{}, 0, "Cannot parse argument as number"],
-  [0, '0', "Expected argument to be a string"],
-  ['0', 0, "Expected argument to be a string"],
+  [0, "0", "Expected argument to be a string"],
+  ["0", 0, "Expected argument to be a string"],
   [true, false, "Cannot parse boolean as number"],
   [false, true, "Cannot parse boolean as number"],
   [true, true, "Cannot parse boolean as number"],
@@ -44,8 +44,11 @@ const validationTestCases = [
   ["2", "2 4", "String cannot be reliably parsed to number"],
 ];
 
-describe.each(validationTestCases)('Validating sum(%s, %s)', (param1, param2, errorMessage) => {
-  test(`throws ${errorMessage}`, () => {
-    expect(() => sum(param1, param2)).toThrowError(errorMessage);
-  });
-})
+describe.each(validationTestCases)(
+  "Validating sum(%s, %s)",
+  (param1, param2, errorMessage) => {
+    test(`throws ${errorMessage}`, () => {
+      expect(() => sum(param1, param2)).toThrowError(errorMessage);
+    });
+  }
+);
